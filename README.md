@@ -2,7 +2,7 @@
   Stock Management System in C#
 </h1>
 <p align="center">
-  Be sure to ⭐ my configuration repo so you can keep up to date on any daily progress!
+  Be sure to ⭐ this repo so you can keep up to date on any daily progress!
 </p>
 
 ![demo](https://raw.githubusercontent.com/Abhijith14/StockManagement-Csharp/master/readme_assets/demo.png)  

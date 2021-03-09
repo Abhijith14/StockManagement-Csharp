@@ -1,0 +1,262 @@
+//   try
+         //   {
+                #region Common Part
+                PdfPTable pdfTable3 = new PdfPTable(DataGridView1.ColumnCount);
+                pdfTable3.DefaultCell.Padding = 3;
+                pdfTable3.WidthPercentage = 80;
+                pdfTable3.HorizontalAlignment = Element.ALIGN_CENTER; 
+               // pdfTable3.DefaultCell.VerticalAlignment = Element.ALIGN_LEFT;
+                pdfTable3.DefaultCell.BorderWidth = 1;
+                //Footer Sectionaa
+         /*       PdfPTable pdfTableFooter = new PdfPTable(1);
+                pdfTableFooter.DefaultCell.BorderWidth = 0;
+                pdfTableFooter.WidthPercentage = 100;
+                pdfTableFooter.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+
+                
+                Chunk cnkFooter = new Chunk("Thank You.", FontFactory.GetFont("Times New Roman"));
+                cnkFooter.Font.SetStyle(1);
+                cnkFooter.Font.Size = 10;
+                pdfTableFooter.AddCell(new Phrase(cnkFooter));
+                //End Of Footer Section
+                */
+                
+
+                #endregion
+
+                #region Page
+                #region Section-1
+
+        /*        PdfPTable pdfTable1 = new PdfPTable(1);//Here 1 is Used For Count of Column
+                PdfPTable pdfTable2 = new PdfPTable(1);
+                PdfPTable pdfTable4 = new PdfPTable(1);
+                PdfPTable pdfTable5 = new PdfPTable(1);
+
+                //Font Style
+                System.Drawing.Font fontH1 = new System.Drawing.Font("Currier", 16);
+
+                pdfTable1.DefaultCell.Padding = 5;
+                pdfTable1.WidthPercentage = 80;
+                pdfTable1.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                pdfTable1.DefaultCell.VerticalAlignment = Element.ALIGN_CENTER;
+                pdfTable1.DefaultCell.BackgroundColor = new iTextSharp.text.BaseColor(64, 134, 170);
+                pdfTable1.DefaultCell.BorderWidth = 0;
+
+
+                pdfTable1.DefaultCell.Padding = 5;
+                pdfTable2.WidthPercentage = 80;
+                pdfTable2.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                pdfTable2.DefaultCell.VerticalAlignment = Element.ALIGN_CENTER;
+                pdfTable1.DefaultCell.BackgroundColor = new iTextSharp.text.BaseColor(64, 134, 170);
+                pdfTable2.DefaultCell.BorderWidth = 0;
+
+                pdfTable4.DefaultCell.Padding = 0;
+                pdfTable4.WidthPercentage = 80;
+                pdfTable4.DefaultCell.HorizontalAlignment = Element.ALIGN_LEFT;
+                pdfTable4.DefaultCell.VerticalAlignment = Element.ALIGN_LEFT;
+                pdfTable4.DefaultCell.BorderWidth = 0;
+
+        /*        pdfTable5.WidthPercentage = 80;
+                pdfTable5.DefaultCell.HorizontalAlignment = Element.ALIGN_RIGHT;
+                pdfTable5.DefaultCell.VerticalAlignment = Element.ALIGN_RIGHT;
+                pdfTable5.DefaultCell.BorderWidth = 0;  */
+                //   pdfTable3.DefaultCell.Padding = 5;
+                //    pdfTable3.WidthPercentage = 80;
+                //   pdfTable3.DefaultCell.BorderWidth = 0.5f;*/
+                
+
+           /*     Chunk c1 = new Chunk("Jyothis Central School", FontFactory.GetFont("Times New Roman"));
+                c1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                c1.Font.SetStyle(0);
+                c1.Font.Size = 14;
+                Phrase p1 = new Phrase();
+                p1.Add(c1);
+                pdfTable1.AddCell(p1);
+                Chunk c2 = new Chunk("KAZHAKUTTOM P.O, Tvpm - 695582", FontFactory.GetFont("Times New Roman"));
+                c2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                c2.Font.SetStyle(0);
+                c2.Font.Size = 11;
+                Phrase p2 = new Phrase();
+                p2.Add(c2);
+                pdfTable2.AddCell(p2);
+                Chunk c3 = new Chunk("Ph: 0471 - 2705857, 6548751, 2925751, 2415751", FontFactory.GetFont("Times New Roman"));
+                c3.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                c3.Font.SetStyle(0);
+                c3.Font.Size = 11;
+                Phrase p3 = new Phrase();
+                p3.Add(c3);
+                pdfTable2.AddCell(p3);
+                Chunk c4 = new Chunk(" ");
+                Phrase p4 = new Phrase();
+                p4.Add(c4);
+                pdfTable2.AddCell(p4);
+
+                Chunk c9 = new Chunk(" BOOK RECEIPT ");
+                Phrase p9 = new Phrase();
+                p9.Add(c9);
+                pdfTable2.AddCell(p9);
+
+                Chunk c11 = new Chunk("----------------------- ");
+                Phrase p11 = new Phrase();
+                p11.Add(c11);
+                pdfTable2.AddCell(p11);
+
+                Chunk c10 = new Chunk(" ");
+                Phrase p10 = new Phrase();
+                p10.Add(c10);
+                pdfTable4.AddCell(p10);
+
+                Chunk c5 = new Chunk("Student Name = '" + TextBox3.Text + "'                                                            Invoice Number = '" + TextBox1.Text + "'", FontFactory.GetFont("Times New Roman"));
+                c5.Font.Size = 10;
+                Phrase p5 = new Phrase();
+                p5.Add(c5);
+                pdfTable4.AddCell(p5);
+
+                Chunk c6 = new Chunk(" ");
+                Phrase p6 = new Phrase();
+                p6.Add(c6);
+                pdfTable4.AddCell(p6);
+
+                Chunk c7 = new Chunk("Class = '" + TextBox2.Text + "'                                                                                           Date Of Invoice = '" + DateTimePicker1.Text + "'",FontFactory.GetFont("Times New Roman"));
+                c7.Font.Size = 10;
+                Phrase p7 = new Phrase();
+                p7.Add(c7);
+                pdfTable4.AddCell(p7);
+
+                Chunk c8 = new Chunk(" ");
+                Phrase p8 = new Phrase();
+                p8.Add(c8);
+                pdfTable4.AddCell(p8);
+
+                Chunk c12 = new Chunk("Date Of Issue = '" + DateTimePicker2.Text + "'", FontFactory.GetFont("Times New Roman"));
+                c12.Font.Size = 10;
+                Phrase p12 = new Phrase();
+                p12.Add(c12);
+                pdfTable4.AddCell(p12);
+                
+                Chunk c13 = new Chunk(" ");
+                Phrase p13 = new Phrase();
+                p13.Add(c13);
+                pdfTable4.AddCell(p13);
+                pdfTable4.AddCell(p13);
+
+                #endregion
+                #region Section-1
+                /*    PdfPTable pdfTable4 = new PdfPTable(4);
+                    pdfTable4.DefaultCell.Padding = 5;
+                    pdfTable4.WidthPercentage = 80;
+                    pdfTable4.DefaultCell.BorderWidth = 0.0f;
+
+                    pdfTable4.AddCell(new Phrase("Bill No "));
+                    pdfTable4.AddCell(new Phrase("B001"));
+                    pdfTable4.AddCell(new Phrase("Date "));
+                    pdfTable4.AddCell(new Phrase("01-01-2017"));
+                    pdfTable4.AddCell(new Phrase("Vendor "));
+                    pdfTable4.AddCell(new Phrase("Demo Vendor"));
+                    pdfTable4.AddCell(new Phrase("Address "));
+                    pdfTable4.AddCell(new Phrase("Kolkata")); */
+                #endregion
+                #region Section-Image
+
+                //   string imageURL = "E:\Tutorial_SourceCode\itextSharpDemo\itextSharpDemo\Image\img1.jpg";
+                //     iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(imageURL);
+
+                //Resize image depend upon your need
+                //       jpg.ScaleToFit(140f, 120f);
+                //Give space before image
+                //       jpg.SpacingBefore = 10f;
+                //Give some space after the image
+                //      jpg.SpacingAfter = 1f;
+
+                //                jpg.Alignment = Element.ALIGN_CENTER;*/
+                #endregion
+                
+                #region section Table
+             //   int i = 0;
+                foreach (DataGridViewColumn column in DataGridView1.Columns)
+                {
+                 //    i++;
+                 //   if (i > 2)
+                 //   {
+                        PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                        //  cell.BackgroundColor = new iTextSharp.text.Color(240, 240, 240);
+                        pdfTable3.AddCell(cell);
+                  //  }
+                   //  MessageBox.Show(String.Format(" No = {0}", i));
+                }
+                //Adding DataRow
+                foreach (DataGridViewRow row in DataGridView1.Rows)
+                {
+                  //   i = 0;
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                //        i++;
+                 //     if (i > 2)
+                 //     {
+                         pdfTable3.AddCell(cell.Value.ToString());
+                 //     }
+                        // MessageBox.Show(String.Format(" No = {0}", i));
+                    }
+                }
+           /*     pdfTable3.AddCell(new Phrase("COMPANY NAME "));
+                pdfTable3.AddCell(new Phrase(""));
+                pdfTable3.AddCell(new Phrase("JOB TITLE "));
+                pdfTable3.AddCell(new Phrase(""));
+
+                pdfTable3.AddCell(new Phrase("ADDRESS"));
+                pdfTable3.AddCell(new Phrase(""));
+                pdfTable3.AddCell(new Phrase("CONTACT NO "));
+                pdfTable3.AddCell(new Phrase(""));*/
+             
+                #endregion
+
+                #endregion
+
+
+                #region Pdf Generation
+                string folderPath = "D:\\PDF\\";
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
+                //File Name
+                int fileCount = Directory.GetFiles("D:\\PDF").Length;
+                string strFileName = "DescriptionForm" + (fileCount + 1) + ".pdf";
+
+                using (FileStream stream = new FileStream(folderPath + strFileName, FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
+                    PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+                    #region PAGE-1
+                //    pdfDoc.Add(pdfTable1);
+                //    pdfDoc.Add(pdfTable2);
+                 //   pdfDoc.Add(pdfTable4);
+                   // pdfDoc.Add(pdfTable5);
+                    //   pdfDoc.Add(pdfTableBlank);
+                    //  pdfDoc.Add(jpg);
+                    //pdfDoc.Add("");
+                    pdfDoc.Add(pdfTable3);
+               //     pdfDoc.Add(pdfTableFooter);
+                    pdfDoc.NewPage();
+                    #endregion
+
+                    // pdfDoc.Add(jpg);
+
+                 //   pdfDoc.Add(pdfTable2);
+                    pdfDoc.Close();
+                    stream.Close();
+                }
+                #endregion
+
+                #region Display PDF
+                System.Diagnostics.Process.Start(folderPath + "\\" + strFileName);
+                #endregion
+
+          /*  }
+            catch (Exception ex)
+            {
+
+                throw;
+            }*/

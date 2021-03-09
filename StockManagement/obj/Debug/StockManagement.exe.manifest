@@ -1830,14 +1830,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="StockManagement.exe" size="17397216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="StockManagement.exe" size="17396704">
       <assemblyIdentity name="StockManagement" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>V20ELWLNMyu3Vq66tK9NSIhtPz7gNexzuL77+PPtUQc=</dsig:DigestValue>
+        <dsig:DigestValue>WKPcxclzvj0uxcLtf+GQVvQLYQY9L5GxyvP2TOC+p9U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
